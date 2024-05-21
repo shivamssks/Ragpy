@@ -166,7 +166,7 @@ if __name__=="__main__":
         # Argument parser setup
     parser = argparse.ArgumentParser(description='Generator Response for RAG')
     parser.add_argument('--query', default='What is hello?', help='The query for which main logic is executed.')
-    parser.add_argument('--context', nargs='+',default="It is a way to gratitude", help='The context for which the query is asked.')
+    parser.add_argument('--context',default="It is a way to gratitude", help='The context for which the query is asked.')
     parser.add_argument('--chain_type', type=str, default='simple', help='The type of chain to use. Can be "simple", or "retrieval"')
     parser.add_argument('--domain', type=str, default='Healthcare', help='It can be anything.')
     parser.add_argument('--prompt_type', type=str, default='cot', help='The type of prompt to use. Can be "general","custom" or "specific",')
