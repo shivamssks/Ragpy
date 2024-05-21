@@ -125,7 +125,7 @@ class Generator_response():
         models = {} # Dictionary to store model instances
         try:
             temp = self.data['generator']['model_config']['temperature']
-            model_names=["tiiuae/falcon-7b-instruct","gpt-3.5-turbo"]
+            model_names=self.data['generator']['models']['model_names']
             for model_type in model_names:
                 prefix = "gpt"
                 if model_type.startswith(prefix):
