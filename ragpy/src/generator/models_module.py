@@ -52,14 +52,8 @@ class models_mod():
             model = self.openai(temp,model_name)
             return model
         else:
-            if isinstance(temp, list): 
-                models = []
-                for t in temp:
-                    models.append(self.hugging_face(t, model_name))
-            #model = self.hugging_face(str(temp),model_name)
-                return models 
-            else:
-                return self.hugging_face(temp, model_name)
+            model = self.hugging_face(temp, model_name)
+            return model
 
 
 if __name__ == "__main__": 
